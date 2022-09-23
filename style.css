@@ -41,6 +41,10 @@ header > div {
     gap: 12px;
 }
 
+header img {
+    cursor: pointer;
+}
+
 header img[src$="svg"] {
     height: 35px;
 }
@@ -52,24 +56,33 @@ header img[src$="png"] {
 /* SIDEBAR */
 
 .sidebar {
+    position: fixed;
+    height: 95vh;
     display: grid;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 0.5fr 0.2fr 4fr 1fr;
+    grid-template-columns: 1fr;
     justify-content: center;
-    grid-row: 1/4;
+    align-self: center;
+    gap: 17px;
+
     background-color: black;
     color: white;
+
+    margin-left: 15px;
     width: 80px;
-    margin: 15px;
-    padding: 8px 0;
+    padding: 25px 0 14px 0;
     border-radius: 17px;
+    overflow: scroll;
 }
 
 .sidebar p {
     align-self: center;
+    text-align: center;
 }
 
 .sidebar img {
     height: 32px;
+    cursor: pointer;
 }
 
 .navigation,
@@ -79,11 +92,21 @@ header img[src$="png"] {
     gap: 17px;
 }
 
+.navigation {
+    grid-row: 3/4;
+}
+
+.support {
+    grid-row: 4;
+    align-self: end;
+}
+
 /* MAIN */
 
 main {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-column: 2/3;
+    grid-template-rows: 0.6fr 1fr 1fr;
     gap: 5px;
 }
 
@@ -102,6 +125,7 @@ main img {
     display: flex;
     border-radius: 20px;
     padding: 20px;
+    /* height: 211px; */
 }
 
 .business_statistics {
@@ -139,6 +163,7 @@ main img {
 
 .right_sidebar {
     margin: 0 15px;
+    grid-column: 3/4;
 }
 
 .formation_status {
