@@ -3,7 +3,7 @@
     --secondary-color: rgb(219, 230, 236);
 }
 
-p {
+p, h3 {
     margin: 0;
 }
 
@@ -90,7 +90,7 @@ main {
     background-color: black;
     color: white;
     padding: 27px;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
 .formation_head {
@@ -102,7 +102,7 @@ main {
 }
 
 h3 {
-    margin: 0 0 8px 0;
+    margin-bottom: 8px;
 }
 
 .progress {
@@ -168,6 +168,35 @@ button {
 
 .to_do p:nth-child(2) {
     font-size: 12px;
+}
+
+.alert {
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.green_circle {
+    background-color: rgb(135, 196, 107);
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    top: 30px;
+}
+
+.alert_container p {
+    color: rgb(150, 150, 150);
+}
+
+.alert_container p:nth-child(3) {
+    font-size: 13px;
+    line-height: 1.4;
+    margin-top: 10px;
 }
 
 /* FOOTER */
