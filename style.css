@@ -3,6 +3,10 @@
     --secondary-color: rgb(219, 230, 236);
 }
 
+p {
+    margin: 0;
+}
+
 body {
     height: 100vh;
     display: grid;
@@ -89,10 +93,6 @@ main {
     border-radius: 20px;
 }
 
-.formation_status p {
-    margin: 0;
-}
-
 .formation_head {
     align-self: flex-start;
 }
@@ -143,6 +143,31 @@ button {
     margin-top: 20px;
     border: none;
     border-radius: 13px; 
+}
+
+.img_holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 37%;
+    margin-right: 18px;
+}
+
+.to_do_holder {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.img_holder img {
+    height: 35px;
+}
+
+.to_do p:nth-child(2) {
+    font-size: 12px;
 }
 
 /* FOOTER */
