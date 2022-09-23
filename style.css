@@ -36,12 +36,17 @@ header h1 {
 
 header > div {
     display: flex;
-    gap: 8px;
+    align-items: center;
     margin-right: 30px;
+    gap: 12px;
 }
 
-header img {
-    height: 50px;
+header img[src$="svg"] {
+    height: 35px;
+}
+
+header img[src$="png"] {
+    height: 45px;
 }
 
 /* SIDEBAR */
