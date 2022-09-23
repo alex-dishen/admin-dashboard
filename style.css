@@ -1,16 +1,19 @@
-/* :root {} */
+:root {
+    --main-color: rgb(225, 236, 240);
+    --secondary-color: rgb(219, 230, 236);
+}
 
 body {
     height: 100vh;
     display: grid;
-    grid-template-columns: 110px 6fr 3fr;
-    grid-template-rows: 1fr 8fr 50px;
+    grid-template-columns: 110px 6fr 2.2fr;
+    grid-template-rows: 1fr 8fr 100px;
 
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
     font-size: 1.125rem;
 
-    background-color: rgb(225, 236, 240);
+    background-color: var(--main-color);
     color: black;
 }
 
@@ -37,7 +40,7 @@ header img {
     height: 50px;
 }
 
-/* SIDEBARS */
+/* SIDEBAR */
 
 .sidebar {
     display: grid;
@@ -67,14 +70,79 @@ header img {
     gap: 17px;
 }
 
-.right_sidebar {
-    background-color: red;
-}
-
 /* MAIN */
 
 main {
     background-color: yellow;
+}
+
+/* RIGHT SIDEBAR */
+
+.right_sidebar {
+    margin: 0 15px;
+}
+
+.formation_status {
+    background-color: black;
+    color: white;
+    padding: 27px;
+    border-radius: 20px;
+}
+
+.formation_status p {
+    margin: 0;
+}
+
+.formation_head {
+    align-self: flex-start;
+}
+
+.formation_head p {
+    font-size: 14px;
+}
+
+h3 {
+    margin: 0 0 8px 0;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+}
+
+progress[value] {
+    appearance: none;
+    height: 16px;
+    width: auto;
+    margin: 17px 0;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: rgb(64, 64, 64);
+    border-radius: 15px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+}
+
+.progress p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.progress p:nth-child(2) {
+    font-weight: bold;
+}
+
+button {
+    background-color: var(--secondary-color);
+    height: 45px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 13px; 
 }
 
 /* FOOTER */
@@ -84,12 +152,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: center;
     background-color: black;
     color: white;
     grid-column: 2/4;
     font-size: 1.25rem;
-    margin-top: 15px;
-    margin-right: 15px;
+    margin: 15px 15px 15px 0;
     border-radius: 17px;
 }
 
