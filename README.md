@@ -1,8 +1,8 @@
 # Admin Dashboard
 
-Admin Dashboard is created with HTML, CSS and JS.
+Admin Dashboard is created with HTML, CSS.
 
-![Preview](img/)
+![Preview](img/admin_dashboard.png)
 
 ## Links
 - [Live App](https://alex-dishen.github.io/admin-dashboard/) :point_left:
