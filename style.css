@@ -1,8 +1,3 @@
-:root {
-    --main-color: rgb(225, 236, 240);
-    --secondary-color: rgb(219, 230, 236);
-}
-
 p, h3 {
     margin: 0;
 }
@@ -18,8 +13,59 @@ body {
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
     font-size: 1.125rem;
 
-    background-color: var(--main-color);
+    background-color: rgb(225, 236, 240);
     color: black;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    position: fixed;
+    display: grid;
+    grid-template-rows: 0.5fr 0.2fr 4fr 1fr;
+    justify-content: center;
+    align-self: center;
+    gap: 17px;
+    height: 95vh;
+    top: 2.5vh;
+    grid-area: sidebar;
+
+    background-color: black;
+    color: white;
+
+    margin-left: 15px;
+    width: 80px;
+    padding: 25px 0 14px 0;
+    border-radius: 17px;
+    overflow: scroll;
+}
+
+.sidebar p {
+    align-self: center;
+    font-weight: bold;
+}
+
+.sidebar img, 
+header img, 
+main img[src*="dots"] {
+    height: 32px;
+    cursor: pointer;
+}
+
+.navigation,
+.support {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.navigation {
+    grid-row: 3/4;
+}
+
+.support {
+    grid-row: 4;
+    align-self: end;
 }
 
 /* HEAD */
@@ -43,10 +89,6 @@ header > div {
     gap: 12px;
 }
 
-header img {
-    cursor: pointer;
-}
-
 header img[src$="svg"] {
     height: 35px;
 }
@@ -55,63 +97,11 @@ header img[src$="png"] {
     height: 45px;
 }
 
-/* SIDEBAR */
-
-.sidebar {
-    position: fixed;
-    height: 95vh;
-    top: 2.5vh;
-    bottom: 2.5vh;
-    display: grid;
-    grid-template-rows: 0.5fr 0.2fr 4fr 1fr;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-self: center;
-    gap: 17px;
-    grid-area: sidebar;
-
-    background-color: black;
-    color: white;
-
-    margin-left: 15px;
-    width: 80px;
-    padding: 25px 0 14px 0;
-    border-radius: 17px;
-    overflow: scroll;
-}
-
-.sidebar p {
-    align-self: center;
-    text-align: center;
-}
-
-.sidebar img {
-    height: 32px;
-    cursor: pointer;
-}
-
-.navigation,
-.support {
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
-}
-
-.navigation {
-    grid-row: 3/4;
-}
-
-.support {
-    grid-row: 4;
-    align-self: end;
-}
-
 /* MAIN */
 
 main {
     display: grid;
     grid-column: 2/3;
-    grid-template-rows: 0.8fr 0.8fr 0.2r;
     gap: 17px;
     grid-area: main;
 }
@@ -120,22 +110,23 @@ main img {
     height: 50px;
 }
 
-main img[src*="dots"] {
-    height: 33px;
-    cursor: pointer;
-}
-
 .money_statistics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 17px;
 }
 
-.biz_box {
+.biz_box, 
+.chart, 
+.orders,
+.emails {
     background-color: rgb(211, 224, 232);
+    border-radius: 20px;
+}
+
+.biz_box {
     display: flex;
     justify-content: space-between;
-    border-radius: 20px;
     padding: 20px;
 }
 
@@ -149,8 +140,6 @@ main img[src*="dots"] {
 .chart {
     grid-column: 2/3;
     grid-row: 1/3;
-    background-color: rgb(211, 224, 232);
-    border-radius: 20px;
 }
 
 .orders {
@@ -158,8 +147,6 @@ main img[src*="dots"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(211, 224, 232);
-    border-radius: 20px;
     padding: 20px;
 }
 
@@ -192,8 +179,6 @@ main img[src*="dots"] {
 .emails {
     display: flex;
     flex-direction: column;
-    background-color: rgb(211, 224, 232);
-    border-radius: 20px;
     padding: 20px;
     gap: 10px;
 }
@@ -226,8 +211,8 @@ main img[src*="dots"] {
     align-self: flex-start;
 }
 
-.formation_head p {
-    font-size: 14px;
+.formation_head p, .progress p {
+    font-size: 0.875rem;
 }
 
 h3 {
@@ -252,12 +237,11 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-    background-color: var(--secondary-color);
+    background-color: rgb(219, 230, 236);
     border-radius: 15px;
 }
 
 .progress p {
-    font-size: 14px;
     text-align: center;
     margin-bottom: 7px;
 }
@@ -267,12 +251,13 @@ progress[value]::-webkit-progress-value {
 }
 
 button {
-    background-color: var(--secondary-color);
+    background-color: rgb(219, 230, 236);
+    color: black;
     height: 45px;
-    cursor: pointer;
     margin-top: 20px;
     border: none;
-    border-radius: 13px; 
+    border-radius: 13px;
+    cursor: pointer; 
 }
 
 /* to do list */
@@ -300,28 +285,28 @@ button {
 }
 
 .to_do p:nth-child(2) {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 /* alert  */
 
 .alert {
+    display: flex;
     background-color: black;
     color: white;
-    border-radius: 25px;
     padding: 20px;
-    display: flex;
     gap: 12px;
+    border-radius: 25px;
 }
 
 .green_circle {
+    position: relative;
+    flex-shrink: 0;
+    top: 30px;
     background-color: rgb(135, 196, 107);
     height: 13px;
     width: 13px;
     border-radius: 50%;
-    flex-shrink: 0;
-    position: relative;
-    top: 30px;
 }
 
 .alert_container p {
@@ -329,11 +314,11 @@ button {
 }
 
 .alert_container p:nth-child(2) {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .alert_container p:nth-child(3) {
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 1.4;
     margin-top: 10px;
 }
@@ -350,6 +335,7 @@ footer {
 
     background-color: black;
     color: white;
+
     height: 55px;
     font-size: 1.25rem;
     margin-right: 15px;
@@ -382,7 +368,7 @@ footer {
     }
 
     h1 {
-        font-size: 23px;
+        font-size: 1.4375rem;
     }
 
     main {
@@ -399,12 +385,12 @@ footer {
     }
 
     .sidebar p {
-        font-size: 13px;
-        font-weight: bold;
+        font-size: 0.8125rem;
     }
 
-    .emails p {
-        font-size: 14px;
+    .emails p, 
+    footer {
+        font-size: 0.875rem;
     }
 
     .right_sidebar {
@@ -415,10 +401,6 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    footer {
-        font-size: 14px;
     }
 
     .github {

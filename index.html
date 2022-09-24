@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Admin Dashboard</title>
 </head>
 <body>
+    <!-- LEFT SIDEBAR -->
     <aside class="sidebar">
         <p>Stocker</p>
         <div class="navigation">
@@ -27,6 +28,8 @@
         </div>
     </aside>
 
+    <!-- HEADER -->
+    
     <header class="header">
         <h1>Good morning, Alex!</h1>
         <div>
@@ -37,11 +40,14 @@
         </div>
     </header>
 
+    <!-- MAIN -->
+
     <main>
+        <!-- top -->
         <div class="money_statistics">
             <div class="biz_box">
                 <div>
-                    <img src="icons/wallet.svg" alt="wallet">
+                    <img src="icons/wallet.svg">
                     <h2>$143,624</h2>
                     <p>Your bank balance</p>
                 </div>
@@ -49,7 +55,7 @@
             </div>
             <div class="biz_box">
                 <div>
-                    <img src="icons/graph.svg" alt="graph">
+                    <img src="icons/graph.svg">
                     <h2>12</h2>
                     <p>Uncategorized transactions</p>
                 </div>
@@ -57,7 +63,7 @@
             </div>
             <div class="biz_box">
                 <div>
-                    <img src="icons/working_people.svg" alt="working_people">
+                    <img src="icons/working_people.svg">
                     <h2>7</h2>
                     <p>Employees working today</p>
                 </div>
@@ -65,13 +71,14 @@
             </div>
             <div class="biz_box">
                 <div>
-                    <img src="icons/credit_card.svg" alt="spending">
+                    <img src="icons/credit_card.svg">
                     <h2>$3,287.49</h2>
                     <p>This week's card spending</p>
                 </div>
                 <img src="icons/dots.svg">
             </div>
         </div>
+        <!-- middle -->
         <div class="business_statistics">
             <div class="orders">
                 <p>New clients</p>
@@ -88,31 +95,32 @@
                 </div>
             </div>
             <div class="chart">
-                <img src="icons/svg-chart.svg" alt="chart" id="chart">
+                <img src="icons/svg-chart.svg" id="chart">
             </div>
         </div>
+        <!-- bottom -->
         <div class="emails">
             <h2>Recent emails</h2>
             <div>
-                <img src="img/orange_girl.png" alt="orange hair girl">
+                <img src="img/orange_girl.png">
                 <p>Hannah Morgan</p>
                 <p>Meeting scheduled</p>
                 <p>1:24 PM</p>
             </div>
             <div>
-                <img src="img/bluehair_boy.png" alt="blue hair boy">
+                <img src="img/bluehair_boy.png">
                 <p>Ithan Clark</p>
                 <p>Update on marketing campaign</p>
                 <p>12:32 PM</p>
             </div>
             <div>
-                <img src="img/borwnhaired_girl.png" alt="brown hair girl">
+                <img src="img/borwnhaired_girl.png">
                 <p>Brandon Williams</p>
                 <p>Designly 2.0 is about to launch</p>
                 <p>8:57 PM</p>
             </div>
             <div>
-                <img src="img/orange_boy.png" alt="boy with hat">
+                <img src="img/orange_boy.png">
                 <p>Reid Smith</p>
                 <p>My friend Julie loves Dappr!</p>
                 <p>8:49 PM</p>
@@ -120,7 +128,10 @@
         </div>
     </main>
 
+    <!-- RIGHT SIDEBAR -->
+
     <aside class="right_sidebar">
+        <!-- top -->
         <div class="formation_status">
             <div class="formation_head">
                 <h3>Formation status</h3>
@@ -133,12 +144,13 @@
                 <button>View status</button>
             </div>
         </div>
+        <!-- middle -->
         <div class="to_do_container">
             <h2>Your to-Do list</h2>
             <div>
                 <div class="to_do_holder">
                     <div class="img_holder">
-                        <img src="/icons/ticket.svg" alt="ticket">
+                        <img src="icons/ticket.svg">
                     </div>
                     <div class="to_do">
                         <p>Run payroll</p>
@@ -147,7 +159,7 @@
                 </div>
                 <div class="to_do_holder">
                     <div class="img_holder">
-                        <img src="icons/clock.svg" alt="watch">
+                        <img src="icons/clock.svg">
                     </div>
                     <div class="to_do">
                         <p>Review time off request</p>
@@ -156,7 +168,7 @@
                 </div>
                 <div class="to_do_holder">
                     <div class="img_holder">
-                        <img src="icons/planchette.svg" alt="planchette">
+                        <img src="icons/planchette.svg">
                     </div>
                     <div class="to_do">
                         <p>Sign board resolution</p>
@@ -166,7 +178,7 @@
             </div>
             <div class="to_do_holder">
                 <div class="img_holder">
-                    <img src="icons/planchette_done.svg" alt="planchette">
+                    <img src="icons/planchette_done.svg">
                 </div>
                 <div class="to_do">
                     <p>Finish onboarding Tony</p>
@@ -174,15 +186,19 @@
                 </div>
             </div>
         </div>
+        <!-- bottom -->
         <div class="alert">
             <div class="green_circle"></div>
             <div class="alert_container">
                 <h3>Board meeting</h3>
                 <p>Feb 22 at 6:00 PM</p>
-                <p>You have been invited to attend a meeting of the Board Directors</p>
+                <p>You have been invited to attend a meeting of the 
+                    Board Directors</p>
             </div>
         </div>
     </aside>
+
+    <!-- FOOTER -->
 
     <footer>
         Copyright ©
