@@ -61,6 +61,7 @@ header img[src$="png"] {
     position: fixed;
     height: 95vh;
     top: 2.5vh;
+    bottom: 2.5vh;
     display: grid;
     grid-template-rows: 0.5fr 0.2fr 4fr 1fr;
     grid-template-columns: 1fr;
